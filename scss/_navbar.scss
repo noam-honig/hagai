@@ -4,8 +4,8 @@
   .navbar-toggler {
     font-size: 80%;
     padding: 0.75rem;
-    color: $primary;
-    border: 1px solid $primary;
+    color: fade-out($white, 0.5);
+    border: 1px solid fade-out($white, 0.5);
     &:focus {
       outline: none;
     }
@@ -13,7 +13,8 @@
   .navbar-brand {
     color: $black;
     font-weight: 700;
-    padding: .9rem 0;
+    padding: 0.9rem 0;
+    visibility: hidden;
   }
   .navbar-nav {
     .nav-item {
@@ -29,22 +30,22 @@
       }
     }
   }
-  @media (min-width: 992px) {
+  @media (min-width: 10px) {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
     .navbar-brand {
-      padding: .5rem 0;
-      color: fade-out($white, .5);
+      padding: 0.5rem 0;
+      color: fade-out($white, 0.5);
     }
     .nav-link {
       transition: none;
       padding: 2rem 1.5rem;
-      color: fade-out($white, .5);
+      color: fade-out($white, 0.5);
       &:hover {
-        color: fade-out($white, .25);
+        color: fade-out($white, 0.25);
       }
       &:active {
         color: white;
@@ -54,6 +55,11 @@
       background-color: $white;
       .navbar-brand {
         color: $black;
+        visibility: visible;
+      }
+      .navbar-toggler {
+        color: $primary;
+        border: 1px solid $primary;
       }
       .nav-link {
         color: $black;
