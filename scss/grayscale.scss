@@ -58,8 +58,11 @@ footer {
   flex-wrap: wrap;
   place-content: center;
   >img{
-    max-width:500px;
+    max-width:100%;
     max-height:500px;
     margin:15px;
+    @media(min-width: 768px) {
+      max-width:500px;
+    }
   }
 }

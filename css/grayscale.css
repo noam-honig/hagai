@@ -359,7 +359,13 @@ footer {
 }
 
 .rem-tat > img {
-  max-width: 500px;
+  max-width: 100%;
   max-height: 500px;
   margin: 15px;
+}
+
+@media (min-width: 768px) {
+  .rem-tat > img {
+    max-width: 500px;
+  }
 }
